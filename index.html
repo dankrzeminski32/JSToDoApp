@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-    <script src="/index.js"></script>
+    <script src="/index.js" defer></script>
     <title>To-Do List</title>
   </head>
   <body>
@@ -16,7 +16,11 @@
     <form>
       <label for="task">Task to complete: </label>
       <input type="text" id="task" name="taskItem" />
-      <button onclick="createTask()" type="submit">Submit!</button>
+      <button id="form-submit" onclick="createTask()" type="button">
+        Submit!
+      </button>
     </form>
+
+    <ul id="task-list"></ul>
   </body>
 </html>
