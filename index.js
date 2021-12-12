@@ -5,12 +5,14 @@ console.log("It is working....");
 function createTask() {
   let task = document.getElementById("task").value;
   let taskItem = document.createElement("li");
+  let taskContainer = document.createElement("p");
   let taskItemText = document.createTextNode(task);
-  taskItem.appendChild(taskItemText);
+  taskItem.setAttribute("class", "task-item");
+  taskContainer.appendChild(taskItemText);
+  taskItem.appendChild(taskContainer);
   let xIconSpan = document.createElement("span");
-  //let xIcon = document.createTextNode("/u24d8");
-  //xIconSpan.appendChild(xIcon);
-  xIconSpan.innerHTML = "     &#10006";
+  xIconSpan.innerHTML = "&#10006";
+  xIconSpan.setAttribute("class", "delete-icon");
   xIconSpan.setAttribute("onclick", "removeItem(this)");
   taskItem.appendChild(xIconSpan);
   console.log(taskItem);

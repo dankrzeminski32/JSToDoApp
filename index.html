@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="main.css" />
     <script src="/index.js" defer></script>
     <title>To-Do List</title>
   </head>
@@ -13,14 +14,15 @@
       <h1>To-Do List</h1>
     </header>
 
-    <form>
-      <label for="task">Task to complete: </label>
-      <input type="text" id="task" name="taskItem" />
-      <button id="form-submit" onclick="createTask()" type="button">
-        Submit!
-      </button>
-    </form>
-
+    <div id="task-form">
+      <form onSubmit="createTask(); return false;">
+        <label for="task">Task to complete: </label>
+        <input autocomplete="off" type="text" id="task" name="taskItem" />
+        <button id="form-submit" onclick="createTask()" type="button">
+          Submit!
+        </button>
+      </form>
+    </div>
     <ul id="task-list"></ul>
   </body>
 </html>
