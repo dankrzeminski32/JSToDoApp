@@ -1,28 +1,38 @@
-console.log("It is working....");
+//selectors
+const submitButton = document.querySelector("#form-submit");
+const taskList = document.querySelector("#task-list");
+const task = document.querySelector("#task");
+//event listeners
+submitButton.addEventListener("click", createTask);
 
-//document.getElementById("form-submit").addEventListener("submit", createTask);
+//functions
 
-function createTask() {
-  let task = document.getElementById("task").value;
-  let taskItem = document.createElement("li");
-  let taskContainer = document.createElement("p");
-  let taskItemText = document.createTextNode(task);
-  taskItem.setAttribute("class", "task-item");
-  taskContainer.appendChild(taskItemText);
-  taskItem.appendChild(taskContainer);
-  let xIconSpan = document.createElement("span");
-  xIconSpan.innerHTML = "&#10006";
-  xIconSpan.setAttribute("class", "delete-icon");
-  xIconSpan.setAttribute("onclick", "removeItem(this)");
-  taskItem.appendChild(xIconSpan);
-  console.log(taskItem);
-  addTask(taskItem);
-  document.getElementById("task").value = "";
-}
+/**
+ * @description Creates the html elements and structure for a task item
+ * @param {Event} e - the button click event from listener
+ */
+function createTask(e) {
+  e.preventDefault();
 
-function addTask(task) {
-  let taskList = document.getElementById("task-list");
-  taskList.appendChild(task);
+  //div element to hold task and buttons
+  let taskContainer = document.createElement("div");
+  taskContainer.classList.add("task-container");
+  //li element to hold the text of task
+  let taskText = document.createElement("li");
+  taskText.classList.add("task-text");
+  taskText.textContent = task.value;
+  //create complete button
+  let completeButton = document.createElement("button");
+  completeButton.classList.add("task-complete");
+  //create delete button
+  let deleteButton = document.createElement("button");
+  deleteButton.classList.add("task-delete");
+  //append all children to parent div taskContainer
+  taskContainer.appendChild(completeButton);
+  taskContainer.appendChild(deleteButton);
+  taskContainer.appendChild(taskText);
+  taskList.appendChild(taskContainer);
+  task.value = "";
 }
 
 function removeItem(task) {

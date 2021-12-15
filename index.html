@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORwOKGO=" />
     <link rel="stylesheet" href="main.css" />
-    <script src="/index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/1643bff0fc.js"
+      crossorigin="anonymous"
+    ></script>
     <title>To-Do List</title>
   </head>
   <body>
@@ -15,14 +18,19 @@
     </header>
 
     <div id="task-form">
-      <form onSubmit="createTask(); return false;">
-        <label for="task">Task to complete: </label>
+      <form>
+        <label for="task">Add Task: </label>
         <input autocomplete="off" type="text" id="task" name="taskItem" />
-        <button id="form-submit" onclick="createTask()" type="button">
-          Submit!
+        <button id="form-submit" type="submit">
+          <i class="fas fa-plus-square"></i>
         </button>
       </form>
     </div>
-    <ul id="task-list"></ul>
+
+    <div class="task-container">
+      <ul id="task-list"></ul>
+    </div>
+
+    <script src="/index.js"></script>
   </body>
 </html>
