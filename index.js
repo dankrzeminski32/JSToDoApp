@@ -1,10 +1,10 @@
 //selectors
 const submitButton = document.querySelector("#form-submit");
+const deleteButton = document.querySelector("task-delete");
 const taskList = document.querySelector("#task-list");
 const task = document.querySelector("#task");
 //event listeners
 submitButton.addEventListener("click", createTask);
-
 //functions
 
 /**
@@ -24,20 +24,28 @@ function createTask(e) {
   //create complete button
   let completeButton = document.createElement("button");
   completeButton.classList.add("task-complete");
+  completeButton.innerHTML = "<i class='fas fa-check-square'></i>";
   //create delete button
   let deleteButton = document.createElement("button");
   deleteButton.classList.add("task-delete");
+  deleteButton.innerHTML = "<i class='fas fa-trash-alt'></i>";
   //append all children to parent div taskContainer
   taskContainer.appendChild(completeButton);
   taskContainer.appendChild(deleteButton);
-  taskContainer.appendChild(taskText);
-  taskList.appendChild(taskContainer);
+  taskContainer.prepend(taskText);
+  taskList.prepend(taskContainer);
   task.value = "";
+  deleteButton.addEventListener("click", removeItem);
 }
 
-function removeItem(task) {
-  console.log(task);
-  parentNode = task.parentNode;
-  console.log(parentNode);
-  parentNode.remove();
+function removeItem(e) {
+  parentNode = e.target;
+  console.log(e);
+  if (e.target.classList[0] === "task-delete") {
+    let removeItem = e.target.parentNode;
+    removeItem.remove();
+  } else if (e.target.classList[0] === "fas") {
+    let removeItem = e.target.parentNode.parentNode;
+    removeItem.remove();
+  }
 }
