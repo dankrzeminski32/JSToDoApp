@@ -409,6 +409,7 @@ body {
   background-color: #4063a3;
   margin: 2.5rem;
   color: #d6d6d6;
+  word-break: break-all;
 }
 
 .task-complete {
@@ -428,5 +429,5 @@ body {
 }
 
 .task-text {
-  flex: 90%;
+  flex: 1;
 }
