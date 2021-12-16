@@ -3,8 +3,10 @@ const submitButton = document.querySelector("#form-submit");
 const deleteButton = document.querySelector("task-delete");
 const taskList = document.querySelector("#task-list");
 const task = document.querySelector("#task");
+const completeButton = document.querySelector("task-complete");
 //event listeners
 submitButton.addEventListener("click", createTask);
+
 //functions
 
 /**
@@ -13,7 +15,6 @@ submitButton.addEventListener("click", createTask);
  */
 function createTask(e) {
   e.preventDefault();
-
   //div element to hold task and buttons
   let taskContainer = document.createElement("div");
   taskContainer.classList.add("task-container");
@@ -36,11 +37,14 @@ function createTask(e) {
   taskList.prepend(taskContainer);
   task.value = "";
   deleteButton.addEventListener("click", removeItem);
+  submitButton.addEventListener("click", completeTask);
 }
 
+/**
+ * @description removes the single task from the ul task list
+ * @param {Event} e - the button click event from listener
+ */
 function removeItem(e) {
-  parentNode = e.target;
-  console.log(e);
   if (e.target.classList[0] === "task-delete") {
     let removeItem = e.target.parentNode;
     removeItem.remove();
@@ -48,4 +52,12 @@ function removeItem(e) {
     let removeItem = e.target.parentNode.parentNode;
     removeItem.remove();
   }
+}
+
+/**
+ * @description marks a single task as compeleted
+ * @param {*} e - the button click event from listener
+ */
+function completeTask(e) {
+  parentNode = e.target;
 }
