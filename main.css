@@ -388,18 +388,17 @@ body {
 }
 
 .main-container {
-  min-width: 25%;
-  max-width: 50%;
-  margin: 3rem auto;
+  width: 50%;
+  margin: 0 auto;
 }
 
 #task-list {
-  min-width: 50%;
+  width: 50%;
   flex-direction: column;
   font-size: 3rem;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   color: rgb(27, 22, 22);
 }
 
@@ -430,10 +429,13 @@ body {
 }
 
 .task-text {
-  flex: 1;
+  width: 80%;
+  margin-right: 2rem;
 }
 
 .task-completed {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
+/*Lets make every other list item a different color*/
