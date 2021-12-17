@@ -62,13 +62,21 @@ function completeTask(e) {
   //console.log(e);
   if (e.target.classList[0] === "task-complete") {
     let divContainer = e.target.parentNode;
-    divContainer.classList.add("task-completed");
-    console.log(divContainer);
+    if (divContainer.classList.contains("task-completed")) {
+      divContainer.classList.remove("task-completed");
+    } else {
+      divContainer.classList.add("task-completed");
+    }
   } else {
     let divContainer = e.target.parentNode.parentNode;
-    divContainer.classList.add("task-completed");
-    console.log(divContainer);
+    if (divContainer.classList.contains("task-completed")) {
+      divContainer.classList.remove("task-completed");
+    } else {
+      divContainer.classList.add("task-completed");
+    }
   }
 }
 //need to add implementation where if they click and task is already
 //completed then it uncompletes it
+
+//
