@@ -37,7 +37,7 @@ function createTask(e) {
   taskList.prepend(taskContainer);
   task.value = "";
   deleteButton.addEventListener("click", removeItem);
-  submitButton.addEventListener("click", completeTask);
+  completeButton.addEventListener("click", completeTask);
 }
 
 /**
@@ -56,8 +56,19 @@ function removeItem(e) {
 
 /**
  * @description marks a single task as compeleted
- * @param {*} e - the button click event from listener
+ * @param {Event} e - the button click event from listener
  */
 function completeTask(e) {
-  parentNode = e.target;
+  //console.log(e);
+  if (e.target.classList[0] === "task-complete") {
+    let divContainer = e.target.parentNode;
+    divContainer.classList.add("task-completed");
+    console.log(divContainer);
+  } else {
+    let divContainer = e.target.parentNode.parentNode;
+    divContainer.classList.add("task-completed");
+    console.log(divContainer);
+  }
 }
+//need to add implementation where if they click and task is already
+//completed then it uncompletes it

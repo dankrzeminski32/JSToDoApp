@@ -423,6 +423,7 @@ body {
 .task-delete {
   color: red;
   border-radius: 1rem;
+  margin: 0 1rem;
 }
 .task-delete:hover {
   cursor: pointer;
@@ -430,4 +431,9 @@ body {
 
 .task-text {
   flex: 1;
+}
+
+.task-completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
