@@ -76,7 +76,3 @@ function completeTask(e) {
     }
   }
 }
-//need to add implementation where if they click and task is already
-//completed then it uncompletes it
-
-//
