@@ -4,6 +4,7 @@ const deleteButton = document.querySelector("task-delete");
 const taskList = document.querySelector("#task-list");
 const task = document.querySelector("#task");
 const completeButton = document.querySelector("task-complete");
+let saved = localStorage.getItem("taskList");
 //event listeners
 submitButton.addEventListener("click", createTask);
 
@@ -30,6 +31,8 @@ function createTask(e) {
   let deleteButton = document.createElement("button");
   deleteButton.classList.add("task-delete");
   deleteButton.innerHTML = "<i class='fas fa-trash-alt'></i>";
+  //Save to local storage
+  saveLocalStorage(task.value);
   //append all children to parent div taskContainer
   taskContainer.appendChild(completeButton);
   taskContainer.appendChild(deleteButton);
@@ -75,4 +78,16 @@ function completeTask(e) {
       divContainer.classList.add("task-completed");
     }
   }
+}
+
+function saveLocalStorage(task) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+  todos.push(task);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
