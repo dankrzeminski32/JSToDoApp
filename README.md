@@ -9,16 +9,14 @@
 <h3 align="center">Vanilla Javascript Task List</h3>
 
   <p align="center">
-This is a **compact** and **lightweight** tool to keep track of all your ongoing tasks.
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    This is a <b>compact</b> and <b>lightweight</b> tool to keep track of all your ongoing tasks.
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://dankrzeminski32.github.io/JSToDoApp/">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/dankrzeminski32/JSToDoApp/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/dankrzeminski32/JSToDoApp/issues">Request Feature</a>
   </p>
 </div>
 
@@ -65,14 +63,10 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Vanilla JS](https://www.javascript.com/)
+* [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
