@@ -9,7 +9,7 @@
 <h3 align="center">Vanilla Javascript Task List</h3>
 
   <p align="center">
-    project_description
+This is a **compact** and **lightweight** tool to keep track of all your ongoing tasks.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
