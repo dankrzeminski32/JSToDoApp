@@ -6,7 +6,7 @@
     <img src="https://user-images.githubusercontent.com/76189617/147705959-5c13c6df-9945-4991-b249-0fd830d77fba.png" alt="Logo">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Vanilla Javascript Task List</h3>
 
   <p align="center">
     project_description
