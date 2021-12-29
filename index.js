@@ -7,7 +7,7 @@ const completeButton = document.querySelector("task-complete");
 let saved = localStorage.getItem("taskList");
 //event listeners
 submitButton.addEventListener("click", createTask);
-
+document.addEventListener("DOMContentLoaded", getTodos);
 //functions
 
 /**
@@ -51,9 +51,11 @@ function removeItem(e) {
   if (e.target.classList[0] === "task-delete") {
     let removeItem = e.target.parentNode;
     removeItem.remove();
+    removeLocalTodos(removeItem);
   } else if (e.target.classList[0] === "fas") {
     let removeItem = e.target.parentNode.parentNode;
     removeItem.remove();
+    removeLocalTodos(removeItem);
   }
 }
 
@@ -100,7 +102,42 @@ function getTodos() {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
 
-  todos.push(task);
+  todos.forEach(function (todo) {
+    //Need to make html elements using the string data of arrays...
+    //div element to hold task and buttons
+    let taskContainer = document.createElement("div");
+    taskContainer.classList.add("task-container");
+    //li element to hold the text of task
+    let taskText = document.createElement("li");
+    taskText.classList.add("task-text");
+    taskText.textContent = todo;
+    //create complete button
+    let completeButton = document.createElement("button");
+    completeButton.classList.add("task-complete");
+    completeButton.innerHTML = "<i class='fas fa-check-square'></i>";
+    //create delete button
+    let deleteButton = document.createElement("button");
+    deleteButton.classList.add("task-delete");
+    deleteButton.innerHTML = "<i class='fas fa-trash-alt'></i>"; //append all children to parent div taskContainer
+    taskContainer.appendChild(completeButton);
+    taskContainer.appendChild(deleteButton);
+    taskContainer.prepend(taskText);
+    taskList.prepend(taskContainer);
+    deleteButton.addEventListener("click", removeItem);
+    completeButton.addEventListener("click", completeTask);
+  });
+}
+
+function removeLocalTodos(todo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+
+  console.log(todo);
+  const toDoIndex = todo.childNodes[0].innerText;
+  todos.splice(todos.indexOf(toDoIndex), 1);
   localStorage.setItem("todos", JSON.stringify(todos));
-  //Need to make html elements using the string data of arrays...
 }
