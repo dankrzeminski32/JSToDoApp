@@ -1,4 +1,4 @@
-![project image](![image](https://user-images.githubusercontent.com/76189617/147705801-9dd3edfe-e9fc-4f25-85a9-37c2fd7dc74b.png))
+![project image](https://user-images.githubusercontent.com/76189617/147705801-9dd3edfe-e9fc-4f25-85a9-37c2fd7dc74b.png)
 
 # Vanilla Javascript - To-Do List
 
