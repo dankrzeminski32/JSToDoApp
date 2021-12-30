@@ -29,15 +29,17 @@ Keeping track of everyday tasks in your head can become quite **unbearable** and
 
 Attempting to be efficient everyday should not be **burdened** by having to memorize all of your ongoing tasks.
 
+<br />
+
 Utilize this application to: 
 * Organize your life and keep track of your priorities.
 * Clear your headspace, take some weight off your mind. 
 * Improve mood, knocking off tasks you needed to complete is a great feeling. 
 
+<br />
 
 
-
-### Built With
+This project was built with: 
 
 * [Vanilla JS](https://www.javascript.com/)
 * [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
@@ -60,6 +62,8 @@ To get a local copy up and running follow these simple example steps.
 
 Nice work, you now have a **copy** of this project on your local machine. 
 
+<br />
+
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -71,6 +75,7 @@ Nice work, you now have a **copy** of this project on your local machine.
     - [x] Delete from local storage
     - [x] Pull from local storage  
 
+<br />
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -85,11 +90,14 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+<br />
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<br />
 
 <!-- CONTACT -->
 ## Contact
